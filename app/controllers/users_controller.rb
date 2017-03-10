@@ -23,14 +23,14 @@ class UsersController < ApplicationController
     end
 
     def create
-      @user = User.create(user_params(:name, :height, :happiness, :nausea, :tickets, :password))
-      session[:user_id] = @user.id
-      redirect_to user_path(@user)
+        @user = User.create(user_params(:name, :height, :happiness, :nausea, :tickets, :password, :admin))
+        session[:user_id] = @user.id
+        redirect_to user_path(@user)
     end
 
     def update
-     @user.update(user_params(:name, :height, :happiness, :nausea, :tickets, :password))
-      redirect_to user_path(@user)
+        @user.update(user_params(:name, :height, :happiness, :nausea, :tickets, :password, :admin))
+        redirect_to user_path(@user)
     end
 
     private

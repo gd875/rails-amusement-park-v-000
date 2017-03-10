@@ -192,7 +192,7 @@ describe 'Feature Test: Go on a Ride', :type => :feature do
   end
 
   it 'prevents users from editing/deleting a ride on the show page' do
-    click_link('See attractions')
+    click_link('See attractions'  )
     click_link("Go on #{@ferriswheel.name}")
     expect(page).to_not have_content("edit")
     expect(page).to_not have_content("delete")
