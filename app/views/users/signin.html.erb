@@ -1,0 +1,6 @@
+<%= form_for(@user, :url => new_session_path, method: :post) do |f| %>
+  <label>User:</label><br>
+  <%= f.text_field :name %><br>
+  <%= f.password_field :password %><br>
+  <%= f.submit 'Sign In' %>
+<% end %>

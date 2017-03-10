@@ -1,0 +1,17 @@
+<%= link_to "Log Out", signout_path, :method => 'delete' %>
+
+Name: <%= @user.name %>
+<br>
+Height: <%= @user.height %>
+<br>
+Happiness: <%= @user.happiness %>
+<br>
+Nausea: <%= @user.nausea %>
+<br>
+Mood: <%= @user.mood %>
+<br>
+Tickets: <%= @user.tickets %>
+<br>
+ADMIN: <%= @user.admin %>
+<br>
+<%= link_to "See attractions", attractions_path %>
